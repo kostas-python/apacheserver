@@ -1,0 +1,27 @@
+
+---
+
+### **commands.txt**
+
+```txt
+# Commands to set up and run the Dockerized Apache project
+
+# Build the Docker image from the Dockerfile
+sudo docker build -t my-apache-image .
+
+# Run the Docker container and map port 80 in the container to port 8080 on the host
+sudo docker run -d -p 8080:80 --name apache-container my-apache-image
+
+# Access the Apache server via your browser at http://localhost:8080
+
+# Stop the running Docker container
+sudo docker stop apache-container
+
+# Remove the Docker container
+sudo docker rm apache-container
+
+# List Docker images
+docker images
+
+# List running Docker containers
+docker ps
